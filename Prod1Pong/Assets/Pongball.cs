@@ -77,6 +77,7 @@ public class Pongball : MonoBehaviour
     
     public void accelerate()
     {
-        rb.AddForce(rb.velocity.normalized * addedSpeed, ForceMode.Impulse);
+        Vector3 direction = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        rb.AddForce(direction.normalized * addedSpeed, ForceMode.Impulse);
     }
 }
