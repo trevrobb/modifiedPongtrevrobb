@@ -82,62 +82,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.tag);
-        if (this.gameObject.CompareTag("playerOne"))
-        {
-            if (other.gameObject.CompareTag("box"))
-            {
-                p1tooFarDown = true;
-            }
-            if (other.gameObject.CompareTag("boxUp"))
-            {
-                p1tooFarUp = true;
-            }
-        }
+  
 
-        if (this.gameObject.CompareTag("playerTwo"))
-        {
-            if (other.gameObject.CompareTag("box"))
-            {
-                p2tooFarDown = true;
-            }
-            if (other.gameObject.CompareTag("boxUp"))
-            {
-                p2tooFarUp = true;
-            }
-        }
-        
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (this.gameObject.CompareTag("playerOne"))
-        {
-            if (other.gameObject.CompareTag("box"))
-            {
-                p1tooFarDown = false;
-            }
-            if (other.gameObject.CompareTag("boxUp"))
-            {
-                p1tooFarUp = false;
-            }
-        }
-
-        if (this.gameObject.CompareTag("playerTwo"))
-        {
-            if (other.gameObject.CompareTag("box"))
-            {
-                p2tooFarDown = false;
-            }
-            if (other.gameObject.CompareTag("boxUp"))
-            {
-                p2tooFarUp = false;
-            }
-        }
-    }
-
+   
    
 
 

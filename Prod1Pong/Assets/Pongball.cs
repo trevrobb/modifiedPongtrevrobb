@@ -20,12 +20,11 @@ public class Pongball : MonoBehaviour
         {
             RandomZ = -1;
         }
-        
-
         PongDirection = new Vector3(RandomX, 0, RandomZ);
 
         
         startPosition = this.transform.position;
+        startPosition.y = 3.1f;
         rb = GetComponent<Rigidbody>();
         rb.AddForce(PongDirection * speed, ForceMode.Impulse);
 
